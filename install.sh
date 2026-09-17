@@ -62,6 +62,7 @@ cp -n "${SCRIPT_DIR}"/backup/backup.conf.example "$BACKUP_CONF_PATH"
 cp -n "${SCRIPT_DIR}"/ntfy.conf.example "/etc/ntfy.conf"
 
 chown -R restic:restic /opt/m4tx-backup
+chown restic:restic "$BACKUP_CONF_PATH"
 
 echo
 echo "Backup config path is $BACKUP_CONF_PATH. Please edit if necessary (but remember to change the permissions to 400 after making any changes)."
