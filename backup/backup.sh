@@ -25,6 +25,7 @@ BACKUP_TAG=auto
 BACKUP_PATHS=(/etc /home /root)
 BACKUP_EXCLUDES=(
   --exclude='/home/*/projects/'
+  --exclude='/home/*/Projects/'
   --exclude='/home/*/.local/share'
   --exclude='/home/*/Videos/'
   --exclude='/home/*/.cache'
