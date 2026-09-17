@@ -70,8 +70,6 @@ Nice=10
 User=restic
 Group=restic
 ExecStart=/opt/m4tx-backup/backup_offsite.sh /etc/%i.conf /etc/%i-offsite.conf
-# Grant read access to all files
-AmbientCapabilities=CAP_DAC_READ_SEARCH
 
 Restart=on-failure
 RestartSec=5min
