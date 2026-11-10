@@ -34,6 +34,21 @@ BACKUP_EXCLUDES=(
   --exclude='/home/*/.rustup/'
   --exclude='/home/*/.cargo/'
   --exclude='/home/*/Music/'
+  --exclude='/home/*/.npm'
+  --exclude='/home/*/.copilot/logs'
+  --exclude='/home/*/.wine/drive_c/windows'
+  # Chromium/Electron app caches
+  --exclude='/home/*/.config/*/Cache'
+  --exclude='/home/*/.config/*/Code Cache'
+  --exclude='/home/*/.config/*/GPUCache'
+  --exclude='/home/*/.config/*/DawnGraphiteCache'
+  --exclude='/home/*/.config/*/DawnWebGPUCache'
+  --exclude='/home/*/.config/*/Service Worker/CacheStorage'
+  # Firefox telemetry, sync logs, and per-site Cache API storage
+  --exclude='/home/*/.mozilla/firefox/*/datareporting'
+  --exclude='/home/*/.mozilla/firefox/*/saved-telemetry-pings'
+  --exclude='/home/*/.mozilla/firefox/*/weave/logs'
+  --exclude='/home/*/.mozilla/firefox/*/storage/default/*/cache'
 )
 if [[ -d /var/lib/docker ]]; then
   BACKUP_PATHS+=(/var/lib/docker)
